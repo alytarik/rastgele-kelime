@@ -8,8 +8,15 @@ function readJSON(path) {
           var fileReader = new FileReader();
           fileReader.addEventListener('load', function(){
                //do stuff with fileReader.result
-               mydata=fileReader.result;
-               console.log(mydata[(Math.random() * mydata.length).toString()]);
+               var mydata=JSON.parse(fileReader.result);
+
+
+               var lis=document.getElementById("container").getElementsByTagName('li');
+               for (let i = 0; i < 5; i++) {
+                    var randi=Math.floor(Math.random()*Object.keys(mydata).length);
+                    var word = mydata[randi.toString()];
+                    lis[i].innerHTML=word;
+               }
           });
           fileReader.readAsText(file);
       } 

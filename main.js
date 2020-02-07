@@ -15,7 +15,7 @@ function readJSON(path) {
 
                var fWord = mydata[(Math.floor(Math.random()*Object.keys(mydata).length)).toString()];
                lis[0].innerHTML=fWord;
-
+                console.log(fWord);
 
                var words=[];
                for (let i = 0; i < 5; i++) {

@@ -18,5 +18,5 @@ function readJSON(path) {
 }
 
 randomise = function() {
-    readJSON("/data.json");
+    readJSON("data.json");
 };

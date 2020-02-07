@@ -12,10 +12,22 @@ function readJSON(path) {
 
 
                var lis=document.getElementById("container").getElementsByTagName('li');
-               for (let i = 0; i < 5; i++) {
-                    var randi=Math.floor(Math.random()*Object.keys(mydata).length);
-                    var word = mydata[randi.toString()];
-                    lis[i].innerHTML=word;
+               for (let i = 0; i < 1; i++) {
+                    var fWord = mydata[(Math.floor(Math.random()*Object.keys(mydata).length)).toString()];
+                    var words=[];
+                    words.push(fWord);
+
+                    for (let i = 0; i < 5; i++) {
+                        var word = mydata[(Math.floor(Math.random()*Object.keys(mydata).length)).toString()];
+                        while(word.slice(-2) != fWord.slice(-2)) {
+                            word = mydata[(Math.floor(Math.random()*Object.keys(mydata).length)).toString()];
+                        }
+                        words.push(word);
+                    }
+                        
+                    for(let i =0;i<5;i++){
+                        lis[i].innerHTML=words[i];
+                    }
                }
           });
           fileReader.readAsText(file);

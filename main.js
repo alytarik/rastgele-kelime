@@ -8,7 +8,8 @@ function readJSON(path) {
           var fileReader = new FileReader();
           fileReader.addEventListener('load', function(){
                //do stuff with fileReader.result
-               fileReader.result;
+               mydata=fileReader.result;
+               console.log(mydata[(Math.random() * mydata.length).toString()]);
           });
           fileReader.readAsText(file);
       } 
@@ -18,5 +19,4 @@ function readJSON(path) {
 
 randomise = function() {
     readJSON("/data.json");
-    console.log(mydata[(Math.random() * mydata.length).toString()]);
 };

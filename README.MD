@@ -1,1 +1,1 @@
-Demo: [https://alytarik.github.io/rastgelekelime/](https://alytarik.github.io/rastgelekelime/)
+Demo: [https://alytarik.github.io/rastgele-kelime/](https://alytarik.github.io/rastgele-kelime/)
